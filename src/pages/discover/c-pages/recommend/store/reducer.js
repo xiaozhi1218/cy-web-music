@@ -1,8 +1,18 @@
-import { Map } from 'immutable';
+// import { Map } from 'immutable';
 
 import * as actionTypes from './constants';
 
-const defaultState = Map({
+// const defaultState = Map({
+//   topBanners: [],
+//   hotRecommends: [],
+//   newAlbums: [],
+
+//   upRanking: {},
+//   newRanking: {},
+//   originRanking: {},
+// });
+
+const defaultState = {
   topBanners: [],
   hotRecommends: [],
   newAlbums: [],
@@ -10,23 +20,28 @@ const defaultState = Map({
   upRanking: {},
   newRanking: {},
   originRanking: {},
-});
+};
 
 function reducer(state = defaultState, action) {
   switch (action.type) {
     case actionTypes.CHANGE_TOP_BANNERS:
-      return state.set("topBanners", action.topBanners);
+      // return state.set("topBanners", action.topBanners);
+      return {...state, topBanners: []};
     case actionTypes.CHANGE_HOT_RECOMMEND:
-      return state.set("hotRecommends", action.hotRecommends);
+      // return state.set("hotRecommends", action.hotRecommends);
+      return {...state, hotRecommends: []};
     case actionTypes.CHANGE_NEW_ALBUM:
-      return state.set("newAlbums", action.newAlbums);
-      
+      // return state.set("newAlbums", action.newAlbums);
+      return {...state, newAlbums: []};
     case actionTypes.CHANGE_UP_RANKING:
-      return state.set("upRanking", action.upRanking);
+      // return state.set("upRanking", action.upRanking);
+      return {...state, upRanking: []};
     case actionTypes.CHANGE_NEW_RANKING:
-      return state.set("newRanking", action.newRanking);
+      // return state.set("newRanking", action.newRanking);
+      return {...state, newRanking: []};
     case actionTypes.CHANGE_ORIGIN_RANKING:
-      return state.set("originRanking", action.originRanking);
+      // return state.set("originRanking", action.originRanking);
+      return {...state, originRanking: []};
     default:
       return state;
   }
