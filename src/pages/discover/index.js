@@ -1,7 +1,8 @@
-import React, { memo } from 'react';
+import React, { memo, useEffect } from 'react';
 import { renderRoutes } from 'react-router-config';
 
 import { dicoverMenu } from "@/common/local-data";
+import request from '@/services/request'
 
 import { NavLink } from 'react-router-dom';
 import {
@@ -10,6 +11,15 @@ import {
 } from './style';
 
 export default memo(function HYDiscover(props) {
+
+  useEffect(() => {
+    request({
+      url: "/banner"
+    }).then(res => {
+      console.log(res);
+    })
+  }, [])
+
   const { route } = props;
 
   return (
