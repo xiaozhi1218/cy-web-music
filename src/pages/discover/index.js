@@ -27,7 +27,7 @@ export default memo(function HYDiscover(props) {
           }
         </TopMenu>
       </div>
-      {/* {renderRoutes(route.routes)} */}
+      {renderRoutes(route.routes)}
     </DiscoverWrapper>
   )
 })

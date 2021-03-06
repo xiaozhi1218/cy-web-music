@@ -25,44 +25,44 @@ const routes = [
     {
       path: "/discover",
       component: HYDiscover,
-      // routes: [
-      //   {
-      //     path: "/discover",
-      //     exact: true,
-      //     render: () => (
-      //       <Redirect to="/discover/recommend"/>
-      //     )
-      //   },
-        // {
-        //   path: "/discover/recommend",
-        //   component: HYRecommend
-        // },
-        // {
-        //   path: "/discover/ranking",
-        //   component: HYRanking
-        // },
-        // {
-        //   path: "/discover/songs",
-        //   component: HYSongs
-        // },
-        // {
-        //   path: "/discover/djradio",
-        //   exact: true,
-        //   component: HYDjradio
-        // },
-        // {
-        //   path: "/discover/artist",
-        //   component: HYArtist
-        // },
-        // {
-        //   path: "/discover/album",
-        //   component: HYAlbum
-        // },
-        // {
-        //   path: "/discover/player",
-        //   component: HYPlayer
-        // }
-      // ]
+      routes: [
+        {
+          path: "/discover",
+          exact: true,
+          render: () => (
+            <Redirect to="/discover/recommend"/>
+          )
+        },
+        {
+          path: "/discover/recommend",
+          component: HYRecommend
+        },
+        {
+          path: "/discover/ranking",
+          component: HYRanking
+        },
+        {
+          path: "/discover/songs",
+          component: HYSongs
+        },
+        {
+          path: "/discover/djradio",
+          exact: true,
+          component: HYDjradio
+        },
+        {
+          path: "/discover/artist",
+          component: HYArtist
+        },
+        {
+          path: "/discover/album",
+          component: HYAlbum
+        },
+        {
+          path: "/discover/player",
+          component: HYPlayer
+        }
+      ]
     },
     {
       path: "/mine",
