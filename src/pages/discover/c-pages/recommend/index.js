@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 
 import HYTopBanner from './c-cpns/top-banner';
 import HYHotRecommend from './c-cpns/hot-recommend';
-// import HYNewAlbum from './c-cpns/new-album';
+import HYNewAlbum from './c-cpns/new-album';
 // import HYRecommendRanking from './c-cpns/recommend-ranking';
 // import HYUserLogin from './c-cpns/user-login';
 // import HYSettleSinger from './c-cpns/settle-singer';
@@ -21,8 +21,8 @@ function HYRecommend(props) {
       <Content className="wrap-v2">
         <RecommendLeft>
           <HYHotRecommend/>
-          {/* <HYNewAlbum/>
-          <HYRecommendRanking/> */}
+          <HYNewAlbum/>
+          {/* <HYRecommendRanking/> */}
         </RecommendLeft>
         {/* <RecommendRight>
           <HYUserLogin/>
