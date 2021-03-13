@@ -38,7 +38,6 @@ const changeOriginRankingAction = (res) => ({
   originRanking: res.playlist
 })
 
-// action参数为一个函数，参数直接调用，有可能需要传入page、limit等参数给返回的函数使用
 export const getTopBannerAction = () => {
   return dispatch => {
     getTopBanners().then(res => {
